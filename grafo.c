@@ -51,7 +51,7 @@ void mostrarLista(Lista L) {
   for (i = 0; i < L->n; i++) {
     printf("%2d ->", i);
     for (p = L->A[i]; p != NULL; p = p->prox)
-      printf("%2d, ", p->rotulo);
+      printf("%2d [%d], ", p->rotulo, p->peso);
     printf("\n");
   }
 }

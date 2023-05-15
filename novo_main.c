@@ -1,5 +1,4 @@
-//#include "grafo.h"
-#include "includes\leitor.h"
+#include "includes/leitor.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -13,7 +12,7 @@ int main(void) {
   scanf("%i", &a);
 
   l = inicializaLista(a);
-  lerArquivoGrafo("database.csv", l);
+  lerArquivoGrafo("database.csv", &l);
   mostrarLista(l);
 
   do {
@@ -21,10 +20,10 @@ int main(void) {
     scanf("%i", &i);
     switch (i) {
       case 1: 
-        printf("Diga o valor da aresta de saida\n");                     
+        printf("voce digitou 1\n");                     
         break;
       case 2:
-        printf("Diga o valor da aresta de saida\n");        
+       printf("voce digitou 2\n");              
         break;  
       case 3:
         mostrarLista(l);
