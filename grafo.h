@@ -13,7 +13,7 @@ struct lista {
 };
 
 Lista inicializaLista(int n);
-void arestaLista(Lista L, int b, int a);
+void arestaLista(Lista L, int b, int a, int peso);
 void removeArestaL(Lista L, int a, int b);
 void mostrarLista(Lista L);
 int returnVerticeL(Lista L);
