@@ -1,10 +1,9 @@
 #include "leitor.h"
-#include "../grafo.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int lerArquivoGrafo(char * filename){
+int lerArquivoGrafo(char * filename, Lista l){
     FILE * fp;
     char * linha;
     //source, destiny, weight of the edge
@@ -17,8 +16,9 @@ int lerArquivoGrafo(char * filename){
     rewind(fp);
     while (!feof(fp)) { 
 		fscanf(fp, "%d,%d,%d", &s, &d, &w);
-        //fgets(linha, 31, fp); // lê a primeira linha do arquivo
-        printf("aresta = %d,%d,%d\n", s, d, w);		
+        
+        printf("aresta = %d,%d,%d\n", s, d, w);	
+        arestaLista(l, s, d, w);
         //fflush(fp);
 	}
     fclose(fp);

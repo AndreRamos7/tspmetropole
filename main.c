@@ -23,7 +23,7 @@ int main(void) {
         scanf("%i", &a);
         printf("Diga o valor da aresta de entrada\n");
         scanf("%i", &b);
-        arestaLista(l, a, b, 1234);
+        arestaLista(l, a, b, NULL);
         break;
       case 2:
         printf("Diga o valor da aresta de saida\n");

@@ -18,7 +18,7 @@ Lista inicializaLista(int n) {
 void arestaLista(Lista L, int a, int b, int peso) {
   No *p;
   for (p = L->A[a]; p != NULL; p = p->prox) {
-    printf("p->rotulo = %d\n", p->rotulo);
+    //printf("p->rotulo = %d\n", p->rotulo);
     if (p->rotulo == b) {
       return;
     }
@@ -27,9 +27,9 @@ void arestaLista(Lista L, int a, int b, int peso) {
   p->rotulo = b;
   p->peso = peso;
   p->prox = L->A[a];
-  if(L->A[a] != NULL){
+  /*if(L->A[a] != NULL){
     printf("L->A[a] = %d\n", L->A[a]->rotulo);  
-  }
+  }*/
   L->A[a] = p;
   L->m++;
 }

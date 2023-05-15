@@ -1,1 +1,3 @@
-int lerArquivoGrafo(char*);
+#include "../grafo.h"
+
+int lerArquivoGrafo(char*, Lista);
